@@ -9,17 +9,18 @@ my sql commands
 `show databases;` **|shows all dataBases**
 
 -------------------------------------------
-# # ..tables
+# # ..table
 
-`create table animales (
+`create table animales`  **|create x table ** (in () you put column names)
+(
 
 id  int 
 
-tipo varchar(255) **|charLenght**
+tipo varchar(255) **~char lenght**
 
 float
 
 varchar 'hola mundo', 'ss'
 
 
-);`  **|create x table ** (in () you put column names)
+); 
