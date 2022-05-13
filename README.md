@@ -8,19 +8,24 @@ my sql commands
 
 `show databases;` **|shows all dataBases**
 
+------------------------------------------
+
+`use dataBaseName;` **|to use x dataBase**
+
 -------------------------------------------
 # # ..table
 
-`create table animales`  **|create x table ** (in () you put column names)
+`create table animales`  **|create x table** (in () you put column names)
+
 (
 
-id  int 
+id  int, 
 
-tipo varchar(255) **~char lenght**
+tipo varchar(255), **~char lenght**
 
-float
+estado varchar(255),
 
-varchar 'hola mundo', 'ss'
+PRIMARY KEY(id)
 
 
 ); 
