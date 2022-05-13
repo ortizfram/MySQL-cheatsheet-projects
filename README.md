@@ -6,9 +6,9 @@ my sql commands
 
 `create database nameX;`  **|create a dataBase**
 
-`show databases` **|shows all dataBases**
+`show databases;` **|shows all dataBases**
 
 -------------------------------------------
 # # ..tables
 
-`create table (t.name)`  **|create x table**
+`create table tName;`  **|create x table**
