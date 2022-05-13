@@ -38,12 +38,14 @@ PRIMARY KEY(id)
 --------------------------------------
 # #...Insert Data in tables
 
+`insert into tableName`
+
 `1st ()` **~in which column**
 
 `2nd ()` **~things to add**
 
 ```
-insert into tableName (tipo, estado) VALUES('franco','feliz');
+insert into animales (tipo, estado) VALUES('franco','feliz');
 ```
 ------------------------------------
 # #... Modified table
