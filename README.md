@@ -17,7 +17,7 @@ my sql commands
 
 `varchar`  **~char lenght**
 
-`create table animales`  **|create x table** (in () you put column names)
+`create table nameTable`  **|create x table** (in () you put column names)
 
 ```
 create table animales(
@@ -38,6 +38,10 @@ PRIMARY KEY(id)
 --------------------------------------
 # #...Insert Data in tables
 
+`1st ()` **~in which column**
+
+`2nd ()` **~things to add**
+
 ```
-insert into tableName (insertCamp) VALUES('chanchito','feliz');
+insert into tableName (tipo, estado) VALUES('franco','feliz');
 ```
