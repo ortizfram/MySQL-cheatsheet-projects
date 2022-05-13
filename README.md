@@ -16,6 +16,7 @@ my sql commands
 # # ..table
 
 `varchar`  **~char lenght**
+
 `create table animales`  **|create x table** (in () you put column names)
 
 ```
