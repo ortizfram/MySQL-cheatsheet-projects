@@ -30,6 +30,6 @@ PRIMARY KEY(id)
 
 ); 
 
--------------------------------------------
+
 ![image](https://user-images.githubusercontent.com/51888893/168340629-8e7cb71b-618d-420c-98ba-c9b1cdffd34c.png)
 
