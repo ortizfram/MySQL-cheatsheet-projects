@@ -1,4 +1,6 @@
 # MySQL_commands
 my sql commands
 
-`create database`
+`create database nameX;`  
+
+
