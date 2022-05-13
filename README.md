@@ -45,3 +45,11 @@ PRIMARY KEY(id)
 ```
 insert into tableName (tipo, estado) VALUES('franco','feliz');
 ```
+------------------------------------
+# #... Modified table
+
+`ALTER TABLE tableName MODIFY COLUMN columnName TypeofColumn FUNCTION `
+
+```
+ALTER TABLE melondata MODIFY COLUMN id int auto_increment;
+```
