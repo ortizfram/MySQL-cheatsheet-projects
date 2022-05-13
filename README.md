@@ -11,4 +11,15 @@ my sql commands
 -------------------------------------------
 # # ..tables
 
-`create table tName;`  **|create x table**
+`create table animales (
+
+id  int 
+
+tipo varchar(255) **|charLenght**
+
+float
+
+varchar 'hola mundo', 'ss'
+
+
+);`  **|create x table ** (in () you put column names)
