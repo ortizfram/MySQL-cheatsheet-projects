@@ -51,5 +51,5 @@ insert into tableName (tipo, estado) VALUES('franco','feliz');
 `ALTER TABLE tableName MODIFY COLUMN columnName TypeofColumn FUNCTION `
 
 ```
-ALTER TABLE melondata MODIFY COLUMN id int auto_increment;
+ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 ```
