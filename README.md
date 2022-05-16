@@ -80,6 +80,20 @@ ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 ```
 SELECT * from animales;
 ```
+///**--GROUP BY**
+
+`count(id)`
+
+```
+select count(id), marca FROM product group by marca;
+```
+
+how many products had created every user??
+
+```
+select count(p.id), u.name from product p left JOIN  user u on u.id = p.created_by group by p.created_by;
+
+```
 
 `limit` **|just first from list**
 
