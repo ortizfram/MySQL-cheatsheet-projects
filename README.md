@@ -101,6 +101,22 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 
 `!=` **|where is not x value** (where email != laly@gmail.com) = gives everything is not that
 
+```
+select * from user where email != 'layla@gmail.com'
+```
+
+(value)`LIKE  %gmail%;`
+
+```
+select * from user where email LIKE '%gmail%';
+```
+
+`between` EX = (WHERE age Between 3 AND 5)
+
+```
+select * from user where age between 3 and 5;
+```
+
 ------------------------------------------------
 # #...UPDATE registers
 
