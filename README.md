@@ -40,6 +40,19 @@ PRIMARY KEY(id)
 --------------------------------------
 # #...INSERT Data in tables
 
+![image](https://user-images.githubusercontent.com/51888893/168631669-6e28cbf4-a29c-4e69-8eba-ce9ef29af9e3.png)
+
+```
+insert into product (name, created_by, marca)
+values
+	('ipad',1,'apple'),
+    ('iphone',1,'apple'),
+    ('watch',2,'apple'),
+    ('macbook',1,'apple'),
+    ('imac',3,'apple'),
+    ('ipad mini',2,'apple');
+```
+
 `insert into tableName`
 
 `1st ()` **~in which column**
@@ -188,7 +201,7 @@ open new Query tab , create new table **to use foreign keys** and join tables
 
 `created-by` **|refers JOINED from table name**
 
-`foreign key` **|primary key from extern table**
+`foreign key` **|primary key from extern table that it`s id**
 
 ![image](https://user-images.githubusercontent.com/51888893/168628879-fb91c301-de97-44e6-a576-d117884f42f4.png)
 
