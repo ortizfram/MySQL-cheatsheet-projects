@@ -104,6 +104,19 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 ```
 select * from user where email != 'layla@gmail.com'
 ```
+
+///**--REPLACE COLUMN NAMES**
+
+`select` **|show**
+
+`as` (select column1, column2  AS newNameColumn2 FROM xTable)
+
+```
+select id, name AS nombre from user;
+```
+
+
+
 ///**--LIKE**
 
 (emai lLKE) `%gmail`  **|has to FINISH with ONLY gmail**
@@ -167,4 +180,22 @@ DELETE FROM animales WHERE estado ='feliz';
 
 ```
 DELETE FROM animales WHERE id = 3;
+```
+------------------------------------------------
+# #...JOIN tables MIX
+
+open new Query tab , create new table **to use foreign keys** and join tables
+
+`created-by` **|refers JOINED from table name**
+
+`foreign key` **|primary key from extern table**
+
+![image](https://user-images.githubusercontent.com/51888893/168628879-fb91c301-de97-44e6-a576-d117884f42f4.png)
+
+```
+ created_by int not null
+```
+
+```
+foreign key (created_by) references user(id)
 ```
