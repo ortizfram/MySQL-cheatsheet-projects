@@ -57,7 +57,7 @@ ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 ```
 
 --------------------------------------
-# #... List registers SELECT
+# #... select List registers 
 
 `select * FROM tableName;` **|consult all elements  inside table**
 
@@ -69,6 +69,11 @@ SELECT * from animales;
 
 ```
 select * from user limit 1;
+```
+
+`WHERE VALUE <>= X`
+```
+select * from user where edad > 15;
 ```
 
 `where` **|select just 1 of the list**
@@ -88,6 +93,8 @@ SELECT * FROM animales WHERE estado = 'feliz';
 ```
 SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 ```
+
+`OR` **|one of 2 conditions**
 ------------------------------------------------
 # #...Update registers
 
