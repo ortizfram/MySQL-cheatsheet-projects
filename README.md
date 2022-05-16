@@ -229,6 +229,12 @@ select (all column values) FROM (table alias) LEFT JOIN (table alias) `on` table
 select u.id, u.email, p.name from user u LEFT JOIN product p ON u.id = p.created_by;
 ```
 
+`RIGHT JOIN` takes product table as principal
+
+`INNER JOIN` shows if value bttween them exists
+
+`CROSSED JOIN` gives all possibilities (could be giant)
+
 --------------------------------------------------
 # #...RENAME table
 
