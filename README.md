@@ -104,6 +104,7 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 ```
 select * from user where email != 'layla@gmail.com'
 ```
+**--LIKE**
 
 (emai lLKE) `%gmail`  **|has to FINISH with ONLY gmail**
 
@@ -121,7 +122,7 @@ select * from user where email LIKE '%gmail%';
 select * from user where age between 3 and 5;
 ```
 
---ORDER by value 
+**--ORDER by value**
 
 `desc` **|descendent**
 
@@ -131,7 +132,7 @@ select * from user where age between 3 and 5;
 select * from user ORDER BY age ASC
 ```
 
---MAX MIN
+**--MAX MIN**
 
 `max(value) as assingnedColumnName from user`
 
