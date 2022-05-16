@@ -105,6 +105,10 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 select * from user where email != 'layla@gmail.com'
 ```
 
+`%gmail`  **|has to FINISH with ONLY gmail**
+
+`%gmail%` **|SIMILARS could finish with gmail.com**
+
 (value)`LIKE  %gmail%;`
 
 ```
