@@ -199,3 +199,10 @@ open new Query tab , create new table **to use foreign keys** and join tables
 ```
 foreign key (created_by) references user(id)
 ```
+
+--------------------------------------------------
+# #...RENAME table
+
+```
+rename table products to product;
+```
