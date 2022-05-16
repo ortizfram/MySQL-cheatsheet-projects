@@ -13,7 +13,7 @@ my sql commands
 `use dataBaseName;` **|to use x dataBase**
 
 -------------------------------------------
-# # ..table
+# # ..CREATE TABLE
 
 `varchar`  **~char lenght**
 
@@ -38,7 +38,7 @@ PRIMARY KEY(id)
 
 
 --------------------------------------
-# #...Insert Data in tables
+# #...INSERT Data in tables
 
 `insert into tableName`
 
@@ -51,7 +51,7 @@ insert into animales (tipo, estado) VALUES('franco','feliz');
 ```
 
 ------------------------------------
-# #... Modified table
+# #... MODIFY table
 
 `ALTER TABLE tableName MODIFY COLUMN columnName TypeofColumn FUNCTION `
 
@@ -60,7 +60,7 @@ ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 ```
 
 --------------------------------------
-# #... select List registers 
+# #... SELECT List registers 
 
 `select * FROM tableName;` **|consult all elements  inside table**
 
@@ -99,8 +99,10 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 
 `OR` **|one of 2 conditions**
 
+`!=` **|where is not x value** (where email != laly@gmail.com) = gives everything is not that
+
 ------------------------------------------------
-# #...Update registers
+# #...UPDATE registers
 
 `UPDATE / SET / WHERE`
 
