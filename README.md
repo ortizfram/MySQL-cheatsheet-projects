@@ -213,12 +213,20 @@ open new Query tab , create new table **to use foreign keys** and join tables
 foreign key (created_by) references user(id)
 ```
 
-///**--LEFT JOINT**
+///**--LEFT JOIN**
 
 `u = alias for user table`
 
+`p = alias for product table`
+
+`created_by` has table 1 User id **|search id from table 1 and joins created_by from table 2**
+
+*ignore ()
+
+select (all column values) FROM (table alias) LEFT JOIN (table alias) `on` table1 xColumn `=` table2 xColumn
+
 ```
-select u.id, u.email from user u;
+select u.id, u.email, p.name from user u left join product p ON u.id = p.created_by;
 ```
 
 --------------------------------------------------
