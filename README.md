@@ -71,9 +71,22 @@ SELECT * from animales;
 SELECT * FROM animales WHERE id = 1; 
 ```
 
-`where  columnValue = 'feliz';`
+`where  columnValue = 'feliz';` **|search 4 values**
 
 ```
 SELECT * FROM animales WHERE estado = 'feliz';
 ```
 
+`AND` **|search 4 2 or more values together**
+
+```
+SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
+```
+------------------------------------------------
+# #...Update registers
+
+`UPDATE / SET / WHERE`
+
+```
+UPDATE animales  SET estado= `triste` WHERE id = 3;
+```
