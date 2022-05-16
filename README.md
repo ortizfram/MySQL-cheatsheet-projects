@@ -98,3 +98,8 @@ UPDATE animales  SET estado= 'triste' WHERE id = 3;
 ```
 DELETE FROM animales WHERE estado ='feliz';
 ```
+![image](https://user-images.githubusercontent.com/51888893/168608640-9a960409-e332-4061-8802-68bfcecfb296.png)
+
+```
+DELETE FROM animales WHERE id = 3;
+```
