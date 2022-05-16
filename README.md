@@ -57,7 +57,7 @@ ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 ```
 
 --------------------------------------
-# #... List registers
+# #... List registers SELECT
 
 `select * FROM tableName;` **|consult all elements  inside table**
 
@@ -65,7 +65,7 @@ ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 SELECT * from animales;
 ```
 
-`limit` **|just first from list ***
+`limit` **|just first from list**
 
 ```
 select * from user limit 1;
