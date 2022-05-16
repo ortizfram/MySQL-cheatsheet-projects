@@ -65,6 +65,12 @@ ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 SELECT * from animales;
 ```
 
+`limit` **|just first from list ***
+
+```
+select * from user limit 1;
+```
+
 `where` **|select just 1 of the list**
 
 ```
@@ -89,6 +95,12 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 
 ```
 UPDATE animales  SET estado= 'triste' WHERE id = 3;
+```
+
+`would give ERROR, u should put ID`
+
+```
+UPDATE animales SET estado = 'triste' WHERE tipo = 'jose';
 ```
 ----------------------------------------------
 # #...DELETE registers
