@@ -263,8 +263,13 @@ rename table products to product;
 drop table tableName;
 ```
 ------------------------------------------------
+# #...CORDINALITY
+
+`1n - 1n` 
 
 ![image](https://user-images.githubusercontent.com/51888893/168694317-1b1c2445-ad9d-4542-99c5-4ef371fda0bc.png)
+
+`middle table => 1n - n1` **~would be like order DETAIL** (bananas x4, salame x2, etc...)
 
 ![image](https://user-images.githubusercontent.com/51888893/168694612-51bc26f0-e16c-4a33-bd61-acac25190fb9.png)
 
