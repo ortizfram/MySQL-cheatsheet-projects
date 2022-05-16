@@ -35,6 +35,8 @@ PRIMARY KEY(id)
 ```
 
 ![image](https://user-images.githubusercontent.com/51888893/168340629-8e7cb71b-618d-420c-98ba-c9b1cdffd34c.png)
+
+
 --------------------------------------
 # #...Insert Data in tables
 
@@ -47,6 +49,7 @@ PRIMARY KEY(id)
 ```
 insert into animales (tipo, estado) VALUES('franco','feliz');
 ```
+
 ------------------------------------
 # #... Modified table
 
@@ -95,6 +98,7 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 ```
 
 `OR` **|one of 2 conditions**
+
 ------------------------------------------------
 # #...Update registers
 
@@ -109,6 +113,7 @@ UPDATE animales  SET estado= 'triste' WHERE id = 3;
 ```
 UPDATE animales SET estado = 'triste' WHERE tipo = 'jose';
 ```
+
 ----------------------------------------------
 # #...DELETE registers
 
