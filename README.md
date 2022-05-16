@@ -223,10 +223,10 @@ foreign key (created_by) references user(id)
 
 *ignore ()
 
-select (all column values) FROM (table alias) LEFT JOIN (table alias) `on` table1 xColumn `=` table2 xColumn
+select (all column values) FROM (table alias) LEFT JOIN (table alias) `on` table1.xColumn `=` table2.xColumn
 
 ```
-select u.id, u.email, p.name from user u left join product p ON u.id = p.created_by;
+select u.id, u.email, p.name from user u LEFT JOIN product p ON u.id = p.created_by;
 ```
 
 --------------------------------------------------
