@@ -59,10 +59,7 @@ ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 --------------------------------------
 # #... List registers
 
-`select * FROM tableName;` **|consult elements all inside table**
-
-
-
+`select * FROM tableName;` **|consult all elements  inside table**
 
 ```
 SELECT * from animales;
@@ -72,4 +69,10 @@ SELECT * from animales;
 
 ```
 SELECT * FROM animales WHERE id = 1; 
+```
+
+`where  columnName = 'feliz';`
+
+```
+SELECT * FROM animales WHERE estado = 'feliz';
 ```
