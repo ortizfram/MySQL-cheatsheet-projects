@@ -213,6 +213,14 @@ open new Query tab , create new table **to use foreign keys** and join tables
 foreign key (created_by) references user(id)
 ```
 
+///**--LEFT JOINT**
+
+`u = alias for user table`
+
+```
+select u.id, u.email from user u;
+```
+
 --------------------------------------------------
 # #...RENAME table
 
