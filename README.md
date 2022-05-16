@@ -71,8 +71,9 @@ SELECT * from animales;
 SELECT * FROM animales WHERE id = 1; 
 ```
 
-`where  columnName = 'feliz';`
+`where  columnValue = 'feliz';`
 
 ```
 SELECT * FROM animales WHERE estado = 'feliz';
 ```
+
