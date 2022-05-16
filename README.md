@@ -213,7 +213,7 @@ open new Query tab , create new table **to use foreign keys** and join tables
 foreign key (created_by) references user(id)
 ```
 
-///**--LEFT JOIN**
+///**--LEFT JOIN** SHOW ONLY IF TABLE1 HAS CREATED SOMETHING IN TABLE2
 
 `u = alias for user table`
 
