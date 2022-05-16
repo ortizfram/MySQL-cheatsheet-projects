@@ -105,11 +105,11 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 select * from user where email != 'layla@gmail.com'
 ```
 
-`%gmail`  **|has to FINISH with ONLY gmail**
+(emai lLKE) `%gmail`  **|has to FINISH with ONLY gmail**
 
-`%gmail%` **|SIMILARS could finish with gmail.com**
+(email LIKE) `%gmail%` **|SIMILARS could finish with gmail.com**
 
-(value)`LIKE  %gmail%;`
+(value) `LIKE  %gmail%;`
 
 ```
 select * from user where email LIKE '%gmail%';
@@ -119,6 +119,24 @@ select * from user where email LIKE '%gmail%';
 
 ```
 select * from user where age between 3 and 5;
+```
+
+--ORDER by value 
+
+`desc` **|descendent**
+
+`asc` **|ascendent**
+
+```
+select * from user ORDER BY age ASC
+```
+
+--MAX MIN
+
+`max(value) as assingnedColumnName from user`
+
+```
+select max(age) as mayor from user;
 ```
 
 ------------------------------------------------
