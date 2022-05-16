@@ -255,3 +255,10 @@ select u.id, u.email, p.name from user u LEFT JOIN product p ON u.id = p.created
 ```
 rename table products to product;
 ```
+
+--------------------------------------------------
+# #...DELETE TABLES
+
+```
+drop table tableName;
+```
