@@ -55,3 +55,21 @@ insert into animales (tipo, estado) VALUES('franco','feliz');
 ```
 ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 ```
+
+--------------------------------------
+# #... List registers
+
+`select * FROM tableName;` **|consult elements all inside table**
+
+
+
+
+```
+SELECT * from animales;
+```
+
+`where` **|select just 1 of the list**
+
+```
+SELECT * FROM animales WHERE id = 1; 
+```
