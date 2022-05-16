@@ -88,5 +88,13 @@ SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
 `UPDATE / SET / WHERE`
 
 ```
-UPDATE animales  SET estado= `triste` WHERE id = 3;
+UPDATE animales  SET estado= 'triste' WHERE id = 3;
+```
+----------------------------------------------
+# #...DELETE registers
+
+`delete where value = x` **|delete where certain value**
+
+```
+DELETE FROM animales WHERE estado ='feliz';
 ```
