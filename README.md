@@ -4,22 +4,37 @@ my sql commands
 
 ` -- = comment`
 
-# # ..data Bases
+## ..data Bases
 
 `create database nameX;`  **|create a dataBase**
 -------------------------------------------
-# # ..Use dataBase
+## ..Use dataBase
 database
 ```
 USE database_name;
 ```
 -------------------------------------------
-# # ..SELECT
+## 1 ..SELECT
 column
 ```
 SELECT *
 SELECT customer_id, fisrt_name
 ```
+## a) ..FUNTIONS
+
+`calculate discount w user_points`
+
+aritmatic expression (+,-,/,*,% (reminder of the division))
+
+example
+
+⭐ (calculation) `AS var_name`
+```
+SELECT first_name, points, (points * 10) + 100 AS 'discount factor'
+FROM customers
+```
+
+
 ---------------------------------------
 # # ..  FROM, WHERE
 table  (clause words)
@@ -37,7 +52,8 @@ ORDER BY first_name
 ```
 -------------------------------------
 
-`show databases;` **|shows all dataBases**
+
+
 -------------------------------------------
 # # ..CREATE TABLE
 
