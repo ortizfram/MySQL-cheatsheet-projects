@@ -13,7 +13,7 @@ database
 USE database_name;
 ```
 -------------------------------------------
-## 2 SELECT
+## 🟢 SELECT
 
 all or
 column
@@ -34,11 +34,10 @@ SELECT customer_id, fisrt_name
 SELECT first_name, points, (points * 10) + 100 AS 'discount factor'
 FROM customers
 ```
-
 aritmatic expression (+,-,/,*,% (reminder of the division))
 
 ---------------------------------------
-# # ..  FROM, WHERE
+# # 🟢  FROM, WHERE
 
 - FROM
 
@@ -56,15 +55,24 @@ WHERE state = 'VA'
 WHERE birth_date > '1990-01-01'
 ```
 
-- 🤙 EXAMPLE
+🤙 EXAMPLE
 
 ```
 SELECT *
 FROM orders
 WHERE order_date >= '2019-01-01' 
 ```
+
+
+- MULTIPLE CONDITIONS
+
+🤙 EXAMPLE
+
+```
+
+```
 --------------------------------------
-# # ..ORDER BY
+# # 🟢 ORDER BY
 clause
 ```
 ORDER BY first_name
