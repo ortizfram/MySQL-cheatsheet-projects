@@ -1,5 +1,8 @@
 
 # MySQL_cheatsheet my sql commands
+Here the scripts that where used for examples 👇 (most of them from first folder)
+
+https://bit.ly/3rvtqdO
 
 ### comment code
 ` --` SELECT * FROM customers
@@ -39,11 +42,16 @@ FROM customers
 ---------------------------------------
 # # ..  FROM, WHERE
 table  (clause words)
+- FROM
 ```
 FROM customers 
 ```
+- WHERE
+ℹ️ (date values are always represented between  ' ' )
 ```
 WHERE customer_id = 1
+WHERE points > 300
+WHERE state = 'VA'
 ```
 --------------------------------------
 # # ..ORDER BY
