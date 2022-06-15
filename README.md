@@ -2,6 +2,8 @@
 # MySQL_cheatsheet
 my sql commands
 
+` -- = comment`
+
 # # ..data Bases
 
 `create database nameX;`  **|create a dataBase**
@@ -26,6 +28,12 @@ FROM customers
 ```
 ```
 WHERE customer_id = 1
+```
+--------------------------------------
+# # ..ORDER BY
+clause
+```
+ORDER BY first_name
 ```
 -------------------------------------
 
