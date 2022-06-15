@@ -1,26 +1,27 @@
 
-# MySQL_cheatsheet
-my sql commands
+# MySQL_cheatsheet my sql commands
 
-` -- = comment`
+### comment code
+` --` SELECT * FROM customers
 
-## ..data Bases
+## //data Bases
 
 `create database nameX;`  **|create a dataBase**
 -------------------------------------------
-## ..Use dataBase
+## 1 Use dataBase
 database
 ```
 USE database_name;
 ```
 -------------------------------------------
-## 1 ..SELECT
+## 2 SELECT
+all or
 column
 ```
 SELECT *
 SELECT customer_id, fisrt_name
 ```
-## a) ..FUNTIONS
+- FUNTIONS
 
 `calculate discount w user_points`
 
