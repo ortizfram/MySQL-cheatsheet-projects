@@ -5,13 +5,31 @@ my sql commands
 # # ..data Bases
 
 `create database nameX;`  **|create a dataBase**
+-------------------------------------------
+# # ..Use dataBase
+database
+```
+USE database_name;
+```
+-------------------------------------------
+# # ..SELECT
+column
+```
+SELECT *
+SELECT customer_id, fisrt_name
+```
+---------------------------------------
+# # ..  FROM, WHERE
+table  (clause words)
+```
+FROM customers 
+```
+```
+WHERE customer_id = 1
+```
+-------------------------------------
 
 `show databases;` **|shows all dataBases**
-
-------------------------------------------
-
-`use dataBaseName;` **|to use x dataBase**
-
 -------------------------------------------
 # # ..CREATE TABLE
 
