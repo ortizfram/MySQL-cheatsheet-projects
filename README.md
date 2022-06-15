@@ -1,5 +1,5 @@
 
-# MySQL_commands
+# MySQL_cheatsheet
 my sql commands
 
 # # ..data Bases
