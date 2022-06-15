@@ -18,6 +18,7 @@ USE database_name;
 ```
 -------------------------------------------
 ## 2 SELECT
+
 all or
 column
 ```
@@ -42,16 +43,19 @@ FROM customers
 ---------------------------------------
 # # ..  FROM, WHERE
 table  (clause words)
+
 - FROM
 ```
 FROM customers 
 ```
+
 - WHERE
 ℹ️ (date values are always represented between  ' ' )
 ```
 WHERE customer_id = 1
 WHERE points > 300
 WHERE state = 'VA'
+WHERE birth_date > '1990-01-01'
 ```
 --------------------------------------
 # # ..ORDER BY
