@@ -23,24 +23,25 @@ SELECT customer_id, fisrt_name
 ```
 - FUNTIONS
 
-`calculate discount w user_points`
 
-aritmatic expression (+,-,/,*,% (reminder of the division))
 
-example
+🤙 EXAMPLE
 
-⭐ (calculation) `AS var_name`
+🧮 calculate discount w user_points
+
+ `AS var_name`
 ```
 SELECT first_name, points, (points * 10) + 100 AS 'discount factor'
 FROM customers
 ```
 
+aritmatic expression (+,-,/,*,% (reminder of the division))
 
 ---------------------------------------
 # # ..  FROM, WHERE
 
 - FROM
-- 
+
 table  (clause words)
 ```
 FROM customers 
