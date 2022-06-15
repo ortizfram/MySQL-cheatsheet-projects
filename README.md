@@ -4,13 +4,9 @@ Here the scripts that where used for examples 👇 (most of them from first fold
 
 https://bit.ly/3rvtqdO
 
-### comment code
+###### 💁commented code is like this ⤵️
 ` --` SELECT * FROM customers
 
-## //data Bases
-
-`create database nameX;`  **|create a dataBase**
--------------------------------------------
 ## 1 Use dataBase
 database
 ```
@@ -42,9 +38,10 @@ FROM customers
 
 ---------------------------------------
 # # ..  FROM, WHERE
-table  (clause words)
 
 - FROM
+- 
+table  (clause words)
 ```
 FROM customers 
 ```
@@ -56,6 +53,14 @@ WHERE customer_id = 1
 WHERE points > 300
 WHERE state = 'VA'
 WHERE birth_date > '1990-01-01'
+```
+
+- 🤙 EXAMPLE
+
+```
+SELECT *
+FROM orders
+WHERE order_date >= '2019-01-01' 
 ```
 --------------------------------------
 # # ..ORDER BY
