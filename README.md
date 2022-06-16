@@ -37,7 +37,7 @@ FROM customers
 aritmatic expression (+,-,/,*,% (reminder of the division))
 
 ---------------------------------------
-# # 🟢  FROM, WHERE, AND, OR
+# # 🟢  FROM, WHERE, AND, OR, NOT
 
 - `FROM`
 
@@ -81,6 +81,12 @@ SELECT *
 FROM customers
 WHERE birth_date >= '2019-01-01' 
 (OR points > 1000 AND state = 'VA')
+```
+- NOT
+```
+SELECT *
+FROM customers
+WHERE NOT (birth_date >= '1990-01-01' AND points > 1000)
 ```
 
 --------------------------------------
