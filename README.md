@@ -79,7 +79,8 @@ WHERE birth_date >= '1990-01-01' AND points > 1000
 
 SELECT *
 FROM customers
-WHERE birth_date >= '2019-01-01' OR points > 1000 AND state = 'VA'
+WHERE birth_date >= '2019-01-01' 
+(OR points > 1000 AND state = 'VA')
 ```
 
 --------------------------------------
