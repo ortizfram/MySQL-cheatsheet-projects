@@ -37,16 +37,16 @@ FROM customers
 aritmatic expression (+,-,/,*,% (reminder of the division))
 
 ---------------------------------------
-# # 🟢  FROM, WHERE
+# # 🟢  FROM, WHERE, AND, OR
 
-- FROM
+- `FROM`
 
 table  (clause words)
 ```
 FROM customers 
 ```
 
-- WHERE
+- `WHERE`
 ℹ️ (date values are always represented between  ' ' )
 ```
 WHERE customer_id = 1
@@ -64,13 +64,24 @@ WHERE order_date >= '2019-01-01'
 ```
 
 
-- MULTIPLE CONDITIONS
+- MULTIPLE CONDITIONS `AND`, `OR`
+
 
 🤙 EXAMPLE
 
+🧮 birth date gratter than 2019, AND +1000 points
+
+🧮 OR = 1 of 2 conditions AND state = 'virginia'
+```
+SELECT *
+FROM customers
+WHERE birth_date >= '1990-01-01' AND points > 1000
+
+SELECT *
+FROM customers
+WHERE birth_date >= '2019-01-01' OR points > 1000 AND state = 'VA'
 ```
 
-```
 --------------------------------------
 # # 🟢 ORDER BY
 clause
