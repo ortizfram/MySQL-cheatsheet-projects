@@ -82,7 +82,7 @@ FROM customers
 WHERE birth_date >= '2019-01-01' 
 (OR points > 1000 AND state = 'VA')
 ```
-- NOT
+- `NOT`
 ```
 SELECT *
 FROM customers
