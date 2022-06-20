@@ -37,7 +37,7 @@ FROM customers
 aritmatic expression (+,-,/,*,% (reminder of the division))
 
 ---------------------------------------
-# # 🟢  FROM, WHERE, AND, OR, NOT, IN, BETWEEN
+# # 🟢  FROM, WHERE, AND, OR
 
 - `FROM`
 
@@ -98,6 +98,15 @@ from order_items
 WHERE order_id = 6 AND unit_price * quantity > 30
 ```
 
+--------------------------------------
+# # 🟢 ORDER BY
+clause
+```
+ORDER BY first_name
+```
+-------------------------------------
+# # 🟢 OPERATORS // NOT, IN, BETWEEN
+
 - `IN`, `NOT IN` operator
 
 ℹ️ same as OR but you can write all values together like this :
@@ -108,6 +117,8 @@ SELECT *
 FROM customers
 WHERE  state IN ('VA', 'FL', 'GA')
 ```
+
+
 - `BETWEEN`
 
 ℹ️ same as <=, >=
@@ -117,17 +128,13 @@ WHERE  state IN ('VA', 'FL', 'GA')
 ```
 SELECT *
 FROM customers
-WHERE points BETWEEN 1000 AND 3000	
-```
+WHERE points BETWEEN 1000 AND 3000
 
---------------------------------------
-# # 🟢 ORDER BY
-clause
-```
-ORDER BY first_name
-```
--------------------------------------
 
+SELECT *
+FROM customers
+WHERE birth_date BETWEEN '1-1-1990' AND '2000-1-1'
+```
 
 
 -------------------------------------------
