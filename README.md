@@ -105,7 +105,7 @@ clause
 ORDER BY first_name
 ```
 -------------------------------------
-# # 🟢 OPERATORS // NOT, IN, BETWEEN, LIKE
+# # 🟢 OPERATORS // NOT, IN, BETWEEN, LIKE, REGEXP
 
 - `IN`, `NOT IN` operator
 
