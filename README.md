@@ -92,6 +92,15 @@ WHERE NOT (birth_date >= '1990-01-01' AND points > 1000)
 
 🧮 get items FOR ORDER #6, WHERE total price greater than 30
 
+```
+SELECT * 
+from order_items
+WHERE order_id = 6 AND unit_price * quantity > 30
+```
+
+- `IN` operator
+
+
 --------------------------------------
 # # 🟢 ORDER BY
 clause
