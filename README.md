@@ -37,7 +37,7 @@ FROM customers
 aritmatic expression (+,-,/,*,% (reminder of the division))
 
 ---------------------------------------
-# # 🟢  FROM, WHERE, AND, OR
+# # 🟢  FROM, WHERE, AND, OR, NOT
 
 - `FROM`
 
