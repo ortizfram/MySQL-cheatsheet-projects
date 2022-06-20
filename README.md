@@ -140,12 +140,33 @@ WHERE birth_date BETWEEN '1-1-1990' AND '2000-1-1'
 
 🤙 EXAMPLE
 
+ℹ️ you put the **%** to declare what you re looking for 
+
+🥐 LIKE 'b%' = STARTs w B
+
+🥐 LIKE '%b%' = has a B ANYWhERE
+
+🥐 LIKE '%b' = ENDs w B
+
+
+🥐 LIKE '_y' = SECOND CHAR equals Y
+
 🧮 when string starts like **b%**:... 
 
 ```
 SELECT *
 FROM customers
 WHERE last_name LIKE 'b%'
+
+SELECT *
+FROM customers
+WHERE last_name LIKE '%b%'
+
+SELECT *
+FROM customers
+WHERE last_name LIKE '%b'
+
+
 ```
 
 
