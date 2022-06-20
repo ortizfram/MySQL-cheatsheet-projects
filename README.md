@@ -98,7 +98,7 @@ from order_items
 WHERE order_id = 6 AND unit_price * quantity > 30
 ```
 
-- `IN` operator
+- `IN`, `NOT IN` operator
 
 ℹ️ same as OR but you can write all values together like this :
 
