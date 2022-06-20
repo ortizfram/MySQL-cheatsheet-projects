@@ -105,7 +105,7 @@ clause
 ORDER BY first_name
 ```
 -------------------------------------
-# # 🟢 OPERATORS // NOT, IN, BETWEEN
+# # 🟢 OPERATORS // NOT, IN, BETWEEN, LIKE
 
 - `IN`, `NOT IN` operator
 
@@ -135,6 +135,19 @@ SELECT *
 FROM customers
 WHERE birth_date BETWEEN '1-1-1990' AND '2000-1-1'
 ```
+
+- `LIKE` 
+
+🤙 EXAMPLE
+
+🧮 when string starts like **b%**:... 
+
+```
+SELECT *
+FROM customers
+WHERE last_name LIKE 'b%'
+```
+
 
 
 -------------------------------------------
