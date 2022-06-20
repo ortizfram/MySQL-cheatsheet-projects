@@ -37,7 +37,7 @@ FROM customers
 aritmatic expression (+,-,/,*,% (reminder of the division))
 
 ---------------------------------------
-# # 🟢  FROM, WHERE, AND, OR, NOT
+# # 🟢  FROM, WHERE, AND, OR, NOT, IN
 
 - `FROM`
 
@@ -100,6 +100,14 @@ WHERE order_id = 6 AND unit_price * quantity > 30
 
 - `IN` operator
 
+ℹ️ same as OR but you can write all values together like this :
+
+🧮 EXAMPLE
+```
+SELECT *
+FROM customers
+WHERE  state IN ('VA', 'FL', 'GA')
+```
 
 --------------------------------------
 # # 🟢 ORDER BY
