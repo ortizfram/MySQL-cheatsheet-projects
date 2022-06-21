@@ -229,6 +229,34 @@ ORDER BY total_price DESC
 ```
 
 -------------------------------------------
+# # 🟢 LIMIT clause 
+
+```
+SELECT *
+FROM customers
+LIMIT 3
+```
+🥐 LIMIT 6, 3 = offset
+
+🤙EXAMPLE 🧮 dont show first 6, and then show 3 
+
+should be showing 7-9
+```
+SELECT *
+FROM customers
+LIMIT 6, 3
+```
+
+🤙EXAMPLE🧮 get top 3 loyal customers (more points)
+```
+SELECT *
+FROM customers
+ORDER BY points DESC
+LIMIT 3
+
+```
+
+-------------------------------------------
 # # ..CREATE TABLE
 
 `varchar`  **~char lenght**
