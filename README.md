@@ -220,7 +220,13 @@ SELECT *
 FROM customers
 ORDER BY state DESC, first_name
 ```
-
+🤙EXAMPLE 🧮 calculate total_price Where order id = 2 ⭐
+```
+SELECT *, quantity * unit_price AS total_price
+FROM order_items
+WHERE order_id = 2
+ORDER BY total_price DESC
+```
 
 -------------------------------------------
 # # ..CREATE TABLE
