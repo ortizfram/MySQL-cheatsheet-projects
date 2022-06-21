@@ -168,7 +168,20 @@ WHERE last_name LIKE '%b'
 
 
 ```
+- `REGEXP`
 
+ℹ️ same as LIKE 
+
+🥐 REGEXP '^field' = phrase STARTs w field...
+
+🥐 REGEXP 'field$' = phrase ENDs w ...field
+
+🥐 REGEXP 'field|Mac' = phrases HAS fiel OR mac ⭐ you can combine them 
+
+
+🥐 REGEXP '[ae]d' = HAS an A/E BEFORE D
+
+🥐 REGEXP 'd[ae]' = HAS an D after a/e
 
 
 -------------------------------------------
