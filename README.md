@@ -280,6 +280,19 @@ JOIN products p ON
 	oi.product_id = p.product_id
 ```
 -------------------------------------------
+# # 🟢 JOINING ACROSS DATABASES 
+🤙EXAMPLE🧮 combining columns from databases
+
+
+```
+SELECT *
+FROM order_items oi
+JOIN sql_inventory.products p
+	ON oi.product_id = p.product_id
+```
+
+
+-------------------------------------------
 # # ..CREATE TABLE
 
 `varchar`  **~char lenght**
