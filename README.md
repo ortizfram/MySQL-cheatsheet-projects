@@ -338,7 +338,7 @@ JOIN order_statuses os
 USE  sql_invoicing;
 
 SELECT 
-    p.date,
+	p.date,
     p.invoice_id,
     p.amount,
     c.name,
@@ -346,8 +346,10 @@ SELECT
 FROM payments p
 JOIN clients c
 	ON p.client_id = c.client_id
+    -- it says foreing keys are the same
 JOIN payment_methods pm
 	ON p.payment_method = pm.payment_method_id
+	-- we change the number for the payment name
 
 ```
 ❓ ON p.client_id = c.client_id 
