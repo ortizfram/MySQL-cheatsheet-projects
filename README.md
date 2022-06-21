@@ -105,7 +105,7 @@ clause
 ORDER BY first_name
 ```
 -------------------------------------
-# # 🟢 OPERATORS // NOT, IN, BETWEEN, LIKE, REGEXP
+# # 🟢 OPERATORS // NOT, IN, BETWEEN, LIKE, REGEXP, IS NULL
 
 - `IN`, `NOT IN` operator
 
@@ -203,8 +203,18 @@ SELECT *
 FROM customers
 WHERE last_name REGEXP 'b[ru]'
 ```
-
 🥐 REGEXP '[a-d]r' = HAS A--to--D AFTER R
+
+- `IS NULL`  ℹ️ where column is empty
+
+🤙EXAMPLE 🧮 orders that were not shipped
+```
+SELECT *
+FROM orders
+WHERE shipped_date IS NULL
+```
+
+
 
 
 -------------------------------------------
