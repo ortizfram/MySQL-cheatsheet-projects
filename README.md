@@ -174,7 +174,21 @@ WHERE last_name LIKE '%b'
 
 🥐 REGEXP '^field' = phrase STARTs w field...
 
+🤙EXAMPLE 🧮 starts w : my , or contains: SE
+```
+SELECT *
+FROM customers
+WHERE last_name REGEXP '^my|se'
+```
+
 🥐 REGEXP 'field$' = phrase ENDs w ...field
+
+🤙EXAMPLE 🧮 last name ends w :   ey OR on 
+```
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'ey$|on$'
+```
 
 🥐 REGEXP 'field|Mac' = phrases HAS fiel OR mac ⭐ you can combine them 
 
@@ -182,6 +196,15 @@ WHERE last_name LIKE '%b'
 🥐 REGEXP '[ae]d' = HAS an A/E BEFORE D
 
 🥐 REGEXP 'd[ae]' = HAS an D after a/e
+
+🤙EXAMPLE 🧮 contains :b  , followed by : r or u
+```
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'b[ru]'
+```
+
+🥐 REGEXP '[a-d]r' = HAS A--to--D AFTER R
 
 
 -------------------------------------------
