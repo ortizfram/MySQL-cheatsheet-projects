@@ -255,6 +255,24 @@ ORDER BY points DESC
 LIMIT 3
 
 ```
+-------------------------------------------
+# # 🟢 INNER JOINS 
+ℹ️ 👁️ if you have same column  in multiple tables, you have to prefix them with the table name 
+
+ℹ️ 👁️ ALIAS : is like this > FROM orders o, so nxt time you write it you use **o** for orders
+
+🤙EXAMPLE🧮customer_id column in orders table equals = customer_id column in customers table  
+
+ℹ️ is like > the column you want to bring from x table equals, the column you wanted to bring to the new table 
+```
+SELECT order_id,customers.customer_id, first_name, last_name
+FROM orders
+JOIN customers
+	ON orders.customer_id =  customers.customer_id
+```
+
+
+
 
 -------------------------------------------
 # # ..CREATE TABLE
