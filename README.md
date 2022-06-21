@@ -313,6 +313,8 @@ JOIN employees m
 
 ❓in o.customer_id i want -> c.customer_id
 
+ℹ️ 👁️ here we saying that foreign keys of both tables are the same 
+
 👇 JOIN order_statuses os 
 
 ❓in o.status i want -> os.order_status_id
@@ -348,7 +350,9 @@ JOIN payment_methods pm
 	ON p.payment_method = pm.payment_method_id
 
 ```
+❓ ON p.client_id = c.client_id 
 
+ℹ️ 👁️ here we saying that foreign keys of both tables are the same 
 -------------------------------------------
 # # ..CREATE TABLE
 
