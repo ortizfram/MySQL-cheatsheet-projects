@@ -13,7 +13,7 @@ database
 USE database_name;
 ```
 -------------------------------------------
-## 🟢 SELECT
+# # 🟢 SELECT
 
 all or
 column
@@ -257,23 +257,28 @@ LIMIT 3
 ```
 -------------------------------------------
 # # 🟢 INNER JOINS 
-ℹ️ 👁️ if you have same column  in multiple tables, you have to prefix them with the table name 
+ℹ️ 👁️ if you have same column  in multiple tables, you have to prefix them with the table_name.column
 
 ℹ️ 👁️ ALIAS : is like this > FROM orders o, so nxt time you write it you use **o** for orders
 
-🤙EXAMPLE🧮customer_id column in orders table equals = customer_id column in customers table  
-
-ℹ️ is like > the column you want to bring from x table equals, the column you wanted to bring to the new table 
+🤙EXAMPLE🧮what im joining is the last 3 columns to order's table that its limited just to order_id
 ```
-SELECT order_id,customers.customer_id, first_name, last_name
-FROM orders
-JOIN customers
-	ON orders.customer_id =  customers.customer_id
+SELECT order_id, first_name, last_name,  c.customer_id
+FROM orders o
+JOIN customers c
+	ON o.customer_id =  c.customer_id
 ```
+❓ON o.customer_id =  c.customer_id 👇
 
+this  means we're saying that the foreing key in those 2 tables, will be the same in this NEW TABLE
 
-
-
+🤙EXAMPLE🧮 join orders w products , for each order return pr id and name, followed by quantity and unit price from order item table
+```
+SELECT order_id, p.product_id, quantity, oi.unit_price
+FROM order_items oi
+JOIN products p ON 
+	oi.product_id = p.product_id
+```
 -------------------------------------------
 # # ..CREATE TABLE
 
