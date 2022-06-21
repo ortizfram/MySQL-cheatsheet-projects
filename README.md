@@ -98,12 +98,6 @@ from order_items
 WHERE order_id = 6 AND unit_price * quantity > 30
 ```
 
---------------------------------------
-# # 🟢 ORDER BY
-clause
-```
-ORDER BY first_name
-```
 -------------------------------------
 # # 🟢 OPERATORS // NOT, IN, BETWEEN, LIKE, REGEXP, IS NULL
 
@@ -213,8 +207,19 @@ SELECT *
 FROM orders
 WHERE shipped_date IS NULL
 ```
+--------------------------------------
+# # 🟢 ORDER BY clause ℹ️ for sorting data for columns
 
-
+🥐 ORDER BY first_name DESC = descending
+```
+ORDER BY first_name
+```
+🤙EXAMPLE 🧮 sort by state descendent,  and if repeated, sort by name
+```
+SELECT *
+FROM customers
+ORDER BY state DESC, first_name
+```
 
 
 -------------------------------------------
