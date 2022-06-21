@@ -290,7 +290,21 @@ FROM order_items oi
 JOIN sql_inventory.products p
 	ON oi.product_id = p.product_id
 ```
+-------------------------------------------
+# # 🟢 SELF JOINS
+🤙EXAMPLE🧮 write the manager's name for every employer 
 
+```
+USE  sql_hr;
+
+SELECT 
+    e.employee_id,
+    e.first_name,
+    m.first_name AS manager 
+FROM employees e
+JOIN employees m 
+	ON e.reports_to = m.employee_id 
+```
 
 -------------------------------------------
 # # ..CREATE TABLE
