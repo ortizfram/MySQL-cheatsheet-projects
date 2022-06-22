@@ -368,7 +368,7 @@ JOIN order_item_notes oin
     
 ```
 -------------------------------------------
-# # 🟢 IMPLICIT JOIN SYNTAX
+# # 🟢 ⭐a IMPLICIT JOIN SYNTAX
 ⭐ 🧮 slecting and joining everything in **FROM**, you change the **ON** with **WHERE** 👇
 ```
 USE sql_store;
@@ -385,6 +385,17 @@ SELECT *
 FROM orders o 
 JOIN customers c
 	ON o.cusmer_id = c.customer_id
+```
+-------------------------------------------
+# # 🟢 OUTER JOINS// LEFT JOIN, 
+🤙EXAMPLE | `LEFT JOIN` 🧮 all results are shown wether is empty or not 
+```
+USE sql_store;
+SELECT p.product_id, p.name, oi.quantity
+FROM products p
+LEFT JOIN order_items oi
+	ON p.product_id = oi.product_id
+
 ```
 -------------------------------------------
 # # ..CREATE TABLE
