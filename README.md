@@ -411,6 +411,29 @@ LEFT JOIN shippers sh
 	ON o.shipper_id = sh.shipper_id
 ORDER BY c.customer_id
 ```
+🤙EXAMPLE | 🧮orders, JOIN customers, view all shippers, JOIN status 
+```
+USE sql_store;
+
+SELECT 
+	o.order_date,
+    o.order_id,
+    c.first_name,
+    sh.name AS shipper,
+    -- to add sh column
+    os.name AS status
+FROM orders o 
+JOIN customers c 
+	ON o.customer_id = c.customer_id
+    -- SYNC tables
+LEFT JOIN shippers sh 
+	ON o.shipper_id = sh.shipper_id
+    -- SYNC tables ,left join to sshow all
+JOIN order_statuses os
+	ON o.status = os.order_status_id
+
+
+```
 -------------------------------------------
 # # ..CREATE TABLE
 
