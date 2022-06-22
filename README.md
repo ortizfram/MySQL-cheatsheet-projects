@@ -356,6 +356,21 @@ JOIN payment_methods pm
 
 ℹ️ 👁️ here we saying that foreign keys of both tables are the same 
 -------------------------------------------
+# # 🟢 COMPOUND JOINS 
+```
+USE sql_store;
+
+SELECT *
+FROM order_items oi
+JOIN order_item_notes oin
+	ON oi.order_id = oin.order_Id
+    AND oi.product_id = oin.product_id
+    
+```
+-------------------------------------------
+# # 🟢 IMPLICIT JOIN SYNTAX
+
+-------------------------------------------
 # # ..CREATE TABLE
 
 `varchar`  **~char lenght**
