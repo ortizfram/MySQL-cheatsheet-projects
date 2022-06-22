@@ -369,7 +369,23 @@ JOIN order_item_notes oin
 ```
 -------------------------------------------
 # # 🟢 IMPLICIT JOIN SYNTAX
+⭐ 🧮 slecting and joining everything in **FROM**, you change the **ON** with **WHERE** 👇
+```
+USE sql_store;
+SELECT *
+FROM orders o, customers c
+-- select & join in FROM
+WHERE o.customer_id = c.customer_id
+-- change the ON with WHERE
+```
+❓ the original for this will be 👇
 
+```
+SELECT *
+FROM orders o 
+JOIN customers c
+	ON o.cusmer_id = c.customer_id
+```
 -------------------------------------------
 # # ..CREATE TABLE
 
