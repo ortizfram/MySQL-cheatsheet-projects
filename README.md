@@ -396,7 +396,7 @@ FROM products p
 LEFT JOIN order_items oi
 	ON p.product_id = oi.product_id
 ```
-🤙EXAMPLE |  🧮outer join multiple tables. we join all orders to customers, and then join shipper id, then oin shipper name
+🤙EXAMPLE |  🧮`outer join multiple tables`. we join all orders to customers, and then join shipper id, then oin shipper name
 ```
 USE sql_store;
 SELECT 
