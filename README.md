@@ -387,8 +387,10 @@ JOIN customers c
 	ON o.cusmer_id = c.customer_id
 ```
 -------------------------------------------
-# # 🟢 OUTER JOINS// LEFT JOIN, 
-🤙EXAMPLE | `LEFT JOIN` 🧮 all results are shown wether is empty or not 
+# # 🟢 OUTER JOINS// LEFT JOIN, OUTER J MULTiPLE, SELF OUTER J, 
+🧰`LEFT JOIN`
+
+🤙EXAMPLE 🧮 all results are shown wether is empty or not 
 ```
 USE sql_store;
 SELECT p.product_id, p.name, oi.quantity
@@ -396,7 +398,9 @@ FROM products p
 LEFT JOIN order_items oi
 	ON p.product_id = oi.product_id
 ```
-🤙EXAMPLE |  🧮`outer join multiple tables`. we join all orders to customers, and then join shipper id, then oin shipper name
+🧰 `outer join multiple tables`
+
+🤙EXAMPLE |  🧮we join all orders to customers, and then join shipper id, then oin shipper name
 ```
 USE sql_store;
 SELECT 
@@ -411,7 +415,7 @@ LEFT JOIN shippers sh
 	ON o.shipper_id = sh.shipper_id
 ORDER BY c.customer_id
 ```
-🤙EXAMPLE | 🧮orders, JOIN customers, view all shippers, JOIN status 
+🤙EXAMPLE 2 ⭐| 🧮orders, JOIN customers, view all shippers, JOIN status 
 ```
 USE sql_store;
 
@@ -431,8 +435,22 @@ LEFT JOIN shippers sh
     -- SYNC tables ,left join to sshow all
 JOIN order_statuses os
 	ON o.status = os.order_status_id
+```
+🧰 `SELF OUTER JOIN`
 
+🤙EX🧮 here we have employees and 1 of them is the manager so to see him in the list you should uuse LEFT JOIN
 
+```
+USE sql_hr;
+
+SELECT 
+	e.employee_id,
+    e.first_name,
+    m.first_name AS manager
+FROM employees e
+LEFT JOIN employees m
+	ON e.reports_to = m.employee_id
+ORDER BY manager
 ```
 -------------------------------------------
 # # ..CREATE TABLE
