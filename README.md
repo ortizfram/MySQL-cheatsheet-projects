@@ -453,263 +453,49 @@ LEFT JOIN employees m
 ORDER BY manager
 ```
 -------------------------------------------
-# # ..CREATE TABLE
+# # 🟢 ⭐ USING clause 
 
-`varchar`  **~char lenght**
+🧰 `USING ()`
 
-`create table nameTable`  **|create x table** (in () you put column names)
+👁️ it only works if the name of column it's exactly the same 
 
+ℹ️ it simplifys joining tables
+
+original 👇
 ```
-create table animales(
+USE sql_store;
 
-id  int, 
-
-tipo varchar(255),
-
-estado varchar(255),
-
-PRIMARY KEY(id)
-
-
-); 
+SELECT*
+FROM order_items oi
+JOIN order_item_notes oin
+	ON oi.order_id = oin.order_Id
+    AND oi.product_id = oin.product_id
 ```
-
-![image](https://user-images.githubusercontent.com/51888893/168340629-8e7cb71b-618d-420c-98ba-c9b1cdffd34c.png)
-
-
---------------------------------------
-# #...INSERT Data in tables
-
-![image](https://user-images.githubusercontent.com/51888893/168631669-6e28cbf4-a29c-4e69-8eba-ce9ef29af9e3.png)
-
+SIMPLIFIED W `USING`
 ```
-insert into product (name, created_by, marca)
-values
-	('ipad',1,'apple'),
-    ('iphone',1,'apple'),
-    ('watch',2,'apple'),
-    ('macbook',1,'apple'),
-    ('imac',3,'apple'),
-    ('ipad mini',2,'apple');
+USE sql_store;
+
+SELECT*
+FROM order_items oi
+JOIN order_item_notes oin
+	ON (order_Id, product_id)
+    -- coma is an AND
 ```
 
-`insert into tableName`
-
-`1st ()` **~in which column**
-
-`2nd ()` **~things to add**
-
+🤙EX
 ```
-insert into animales (tipo, estado) VALUES('franco','feliz');
-```
+USE sql_store;
 
-------------------------------------
-# #... MODIFY table
-
-`ALTER TABLE tableName MODIFY COLUMN columnName TypeofColumn FUNCTION `
-
-```
-ALTER TABLE animales MODIFY COLUMN id int auto_increment;
+SELECT 
+	o.order_id,
+    c.first_name,
+    sh.name AS shipper
+FROM orders o 
+JOIN customers c 
+	-- ON o.customer_id = c.customer_id
+	USING (customer_id)
+LEFT JOIN shippers sh
+	USING (shipper_id)
 ```
 
---------------------------------------
-# #... SELECT List registers 
-
-`select * FROM tableName;` **|consult all elements  inside table**
-
-```
-SELECT * from animales;
-```
-///**--GROUP BY**
-
-`count(id)`
-
-```
-select count(id), marca FROM product group by marca;
-```
-
-how many products had created every user??
-
-```
-select count(p.id), u.name from product p left JOIN  user u on u.id = p.created_by group by p.created_by;
-
-```
-
-`limit` **|just first from list**
-
-```
-select * from user limit 1;
-```
-
-`WHERE VALUE <>= X`
-```
-select * from user where edad > 15;
-```
-
-`where` **|select just 1 of the list**
-
-```
-SELECT * FROM animales WHERE id = 1; 
-```
-
-`where  columnValue = 'feliz';` **|search 4 values**
-
-```
-SELECT * FROM animales WHERE estado = 'feliz';
-```
-
-`AND` **|search 4 2 or more values together**
-
-```
-SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'franco' ;
-```
-
-`OR` **|one of 2 conditions**
-
-`!=` **|where is not x value** (where email != laly@gmail.com) = gives everything is not that
-
-```
-select * from user where email != 'layla@gmail.com'
-```
-
-///**--REPLACE COLUMN NAMES**
-
-`select` **|show**
-
-`as` (select column1, column2  AS newNameColumn2 FROM xTable)
-
-```
-select id, name AS nombre from user;
-```
-
-
-
-///**--LIKE**
-
-(emai lLKE) `%gmail`  **|has to FINISH with ONLY gmail**
-
-(email LIKE) `%gmail%` **|SIMILARS could finish with gmail.com**
-
-(value) `LIKE  %gmail%;`
-
-```
-select * from user where email LIKE '%gmail%';
-```
-
-`between` EX = (WHERE age Between 3 AND 5)
-
-```
-select * from user where age between 3 and 5;
-```
-
-///**--ORDER by value**
-
-`desc` **|descendent**
-
-`asc` **|ascendent**
-
-```
-select * from user ORDER BY age ASC
-```
-
-///**--MAX MIN**
-
-`max(value) as assingnedColumnName from user`
-
-```
-select max(age) as mayor from user;
-```
-
-------------------------------------------------
-# #...UPDATE registers
-
-`UPDATE / SET / WHERE`
-
-```
-UPDATE animales  SET estado= 'triste' WHERE id = 3;
-```
-
-`would give ERROR, u should put ID`
-
-```
-UPDATE animales SET estado = 'triste' WHERE tipo = 'jose';
-```
-
-----------------------------------------------
-# #...DELETE registers
-
-`delete where value = x` **|delete where certain value**
-
-```
-DELETE FROM animales WHERE estado ='feliz';
-```
-![image](https://user-images.githubusercontent.com/51888893/168608640-9a960409-e332-4061-8802-68bfcecfb296.png)
-
-```
-DELETE FROM animales WHERE id = 3;
-```
-------------------------------------------------
-# #...JOIN tables MIX
-
-open new Query tab , create new table **to use foreign keys** and join tables
-
-`created-by` **|refers JOINED from table name**
-
-`foreign key` **|primary key from extern table that it`s id**
-
-![image](https://user-images.githubusercontent.com/51888893/168628879-fb91c301-de97-44e6-a576-d117884f42f4.png)
-
-```
- created_by int not null
-```
-
-```
-foreign key (created_by) references user(id)
-```
-
-///**--LEFT JOIN** SHOW ONLY IF TABLE1 HAS CREATED SOMETHING IN TABLE2
-
-`u = alias for user table`
-
-`p = alias for product table`
-
-`created_by` has table 1 User id **|search id from table 1 and joins created_by from table 2**
-
-*ignore ()
-
-select (all column values) FROM (table alias) LEFT JOIN (table alias) `on` table1.xColumn `=` table2.xColumn
-
-```
-select u.id, u.email, p.name from user u LEFT JOIN product p ON u.id = p.created_by;
-```
-
-`RIGHT JOIN` takes product table as principal
-
-`INNER JOIN` shows if value bttween them exists
-
-`CROSSED JOIN` gives all possibilities (could be giant)
-
---------------------------------------------------
-# #...RENAME table
-
-```
-rename table products to product;
-```
-
---------------------------------------------------
-# #...DELETE TABLES
-
-```
-drop table tableName;
-```
-------------------------------------------------
-# #...CORDINALITY
-
-`1n - 1n` 
-
-![image](https://user-images.githubusercontent.com/51888893/168694317-1b1c2445-ad9d-4542-99c5-4ef371fda0bc.png)
-
-`middle table => 1n - n1` **~would be like order DETAIL** (bananas x4, salame x2, etc...)
-
-![image](https://user-images.githubusercontent.com/51888893/168694612-51bc26f0-e16c-4a33-bd61-acac25190fb9.png)
 
