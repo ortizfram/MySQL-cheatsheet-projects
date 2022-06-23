@@ -503,6 +503,8 @@ JOIN payment_methods pm
 
 ℹ️ here you combing rows from querys
 
+👁️when UNION, number of columns should be equal otherwise you get an error
+
 🤙EX 1 | `UNION`🧮 you combine order statuses as 'actual' year and 'archieved'
 ```
 USE sql_store;
