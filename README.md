@@ -498,5 +498,33 @@ JOIN payment_methods pm
 	ON p.payment_method = pm.payment_method_id
     -- here we put column id  to link them
 ```
+-------------------------------------------
+# # 🔴 Union
+
+ℹ️ here you combing rows from querys
+
+🤙EX 1 | `UNION`🧮 you combine order statuses as 'actual' year and 'archieved'
+```
+USE sql_store;
+
+SELECT 
+	order_id,
+    order_date,
+    'active' AS status
+FROM orders
+WHERE order_date >= '2019-01-01'
+--
+UNION
+--
+SELECT 
+	order_id,
+    order_date,
+    'archieved' AS status
+FROM orders
+WHERE order_date < '2019-01-01'
+
+	
+
+```
 
 
