@@ -478,7 +478,7 @@ USE sql_store;
 SELECT*
 FROM order_items oi
 JOIN order_item_notes oin
-	ON (order_Id, product_id)
+	USING (order_Id, product_id)
     -- coma is an AND
 ```
 
