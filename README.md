@@ -505,7 +505,9 @@ JOIN payment_methods pm
 
 👁️when UNION, number of columns should be equal otherwise you get an error
 
-🤙EX 1 ⭐|`UNION`🧮 union w <>= conditions for point 'gold', 'bronze', 'silver' 
+💁 we select a new STRING that is not an actual column and assign it to a name 
+
+🤙EX 1 ⭐|`UNION`🧮 union w `<>=` conditions for point 'gold', 'bronze', 'silver' 
 ```
 USE sql_store;
 
@@ -561,5 +563,9 @@ WHERE order_date < '2019-01-01'
 	
 
 ```
+-----------------------------------------------------
+# # 🔵 INSERT a row into table 
+ℹ️ `DEFAULT` = to generate an automatical ID that's not the same as others
+
 
 
