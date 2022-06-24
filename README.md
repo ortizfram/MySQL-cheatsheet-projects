@@ -505,7 +505,40 @@ JOIN payment_methods pm
 
 👁️when UNION, number of columns should be equal otherwise you get an error
 
-🤙EX 1 | `UNION`🧮 you combine order statuses as 'actual' year and 'archieved'
+🤙EX 1 ⭐|`UNION`🧮 union w <>= conditions for point 'gold', 'bronze', 'silver' 
+```
+USE sql_store;
+
+SELECT
+	c.customer_id,
+	first_name,
+    c.points,
+    'bronze' AS type
+FROM customers c
+WHERE points < 2000
+UNION
+SELECT
+	c.customer_id,
+	first_name,
+    c.points,
+    'silver' AS type
+FROM customers c
+WHERE points BETWEEN 2000 AND 3000
+UNION
+SELECT
+	c.customer_id,
+	first_name,
+    c.points,
+    'gold' AS type
+FROM customers c
+WHERE points > 3000
+ORDER BY first_name
+
+	
+
+```
+
+🤙EX 2 | `UNION`🧮 you combine order statuses as 'actual' year and 'archieved'
 ```
 USE sql_store;
 
