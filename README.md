@@ -678,7 +678,14 @@ SET
     payment_date = due_date
 WHERE payment_date IS NULL
 ```
-🧮 update orders where commets is null and customers more than 3000 points 
+ 🧮 update orders where commets is null and customers more than 3000 points 
 ```
+USE sql_store;
 
+UPDATE orders
+SET comments = 'Gold customer'
+WHERE customer_id IN 
+				(SELECT customer_id
+				FROM customers c
+				WHERE points > 3000)
 ```
