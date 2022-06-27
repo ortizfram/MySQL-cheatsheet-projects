@@ -609,6 +609,22 @@ WHERE order_date < '2019-01-01'
 ```
 ⭐🧮 creating a copy of records in invoices table, and put them in new table called invoices_archieved, and in cllient id we want client name (so join clients table ) using this as a subquery in the create statement. and only copy invioces that have a payment
 ```
+USE sql_invoicing;
+
+CREATE TABLE invoices_archieved AS
+SELECT 
+	i.invoice_id,
+    i.number,
+    c.name AS client,
+    i.invoice_total,
+    i.payment_total,
+    i.invoice_date,
+    i.payment_date,
+    i.due_date
+FROM invoices i 
+JOIN clients c
+	USING (client_id)
+WHERE payment_date IS NOT NULL
 
 ```
 
