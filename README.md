@@ -567,5 +567,11 @@ WHERE order_date < '2019-01-01'
 # # 🔵 INSERT a row into table 
 ℹ️ `DEFAULT` = to generate an automatical ID that's not the same as others
 
+-----------------------------------------------------
+# # 🟢 INSERT MULTIPLES ROWS
+
+
+
+
 
 
