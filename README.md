@@ -657,6 +657,28 @@ SET
 	points = points + 50
 WHERE birth_date < '1990-01-01'
  ```
- 
+ # # 🟢 UPDATE w subquerys
+ 🧮update all clients located in NY or CA
+ ```
+ USE sql_invoicing;
+UPDATE invoices
+SET 
+	payment_total = invoice_total * 0.5,
+	payment_date = due_date
+WHERE client_id = 
+			(SELECT client_id
+			FROM clients
+			WHERE state IN ('NY','CA'))
+ ```
+```
+USE sql_invoicing;
+UPDATE invoices
+SET 
+	payment_total = invoice_total * 0.5,
+    payment_date = due_date
+WHERE payment_date IS NULL
+```
+🧮 update orders where commets is null and customers more than 3000 points 
+```
 
-
+```
