@@ -690,3 +690,18 @@ WHERE customer_id IN
 				WHERE points > 3000)
 ```
 --------------------------------------------------------------------------------------------------
+# # 🔴DELETING ROWS 
+```
+USE sql_invoicing;
+
+DELETE FROM invoices
+WHERE 	client_id = 	
+			(SELECT *
+            FROM clients
+            WHERE name = 'Myworks')
+```
+-------------------------------------------------------------------------------------------------
+# # 🔵RESTORING DATA BASES
+- `file`, `open SQL Script`
+
+- 
