@@ -570,6 +570,47 @@ WHERE order_date < '2019-01-01'
 -----------------------------------------------------
 # # 🟢 INSERT MULTIPLES ROWS
 
+🤙EX 🧮 inseting 3 products ...
+```
+INSERT INTO products (name, quantity_stock, unit_price)
+VALUES ('product1', 10, 1.95),
+	   ('product2', 12, 4.9),
+       ('product3', 166, 1.95)
+```
+# # 🟢 INSERT HIERARCHICAL ROWS
+
+ℹ️`SELECT LAST_INSERT_ID()` = function  
+```
+-- funtion
+INSERT INTO order_items
+VALUES
+		(last_insert_id(), 1, 1 , 2.95),
+		(LAST_INSERT_ID(),2,1,3.00)
+```
+--------------------------------------------------
+# # 🟢 COPY TABLE , INSERTING IN TABLE W FILTERS
+👁️ when creating a cipy like this , SQL ignores `Primary Key` & `AI(auto incrment prop)`
+```
+-- funtion
+INSERT INTO order_items
+VALUES
+		(last_insert_id(), 1, 1 , 2.95),
+		(LAST_INSERT_ID(),2,1,3.00)
+```
+💁 `TRUNCATE TABLE config command` to delete everything from table
+
+🤙EX 🧮 inserting orders placed before 2019 into orders_archieved that is a copy of orders table 
+```
+INSERT INTO orders_archieved 
+SELECT * 
+    
+FROM orders
+WHERE order_date < '2019-01-01'
+```
+⭐🧮 creating a copy of records in invoices table, and put them in new table called invoices_archieved, and in cllient id we want client name (so join clients table ) using this as a subquery in the create statement. and only copy invioces that have a payment
+```
+
+```
 
 
 
