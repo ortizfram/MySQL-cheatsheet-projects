@@ -628,7 +628,26 @@ WHERE payment_date IS NOT NULL
 
 ```
 
+-----------------------------------------------------------------------
+# # 🟢 UPDATE SINGLE ROW
+ `UPDATE`
+ 
+ `SET` = here we specify new value for 1 or more columns
+ 
+ `WHERE` = here we specify the record or records that need to be udated
+ ```
+ USE sql_invoicing;
 
+UPDATE invoices
+SET 
+	payment_total = 10,
+    payment_date = '2019-03-01'
+WHERE invoice_id = 1
 
+ ```
+# # 🟢 UPDATE MULTIPLE ROWS
+ ℹ️ in th WHERE clause insted of = we use IN to specify more than 1 row
+ 
+ 
 
 
