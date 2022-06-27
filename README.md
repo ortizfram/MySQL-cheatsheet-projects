@@ -630,7 +630,7 @@ WHERE payment_date IS NOT NULL
 
 -----------------------------------------------------------------------
 # # 🟢 UPDATE SINGLE ROW
- `UPDATE`
+ `UPDATE` = table 
  
  `SET` = here we specify new value for 1 or more columns
  
@@ -648,6 +648,15 @@ WHERE invoice_id = 1
 # # 🟢 UPDATE MULTIPLE ROWS
  ℹ️ in th WHERE clause insted of = we use IN to specify more than 1 row
  
+ 🧮 +50 points to customers born before 1990
+ ```
+ USE sql_store;
+
+UPDATE customers
+SET 
+	points = points + 50
+WHERE birth_date < '1990-01-01'
+ ```
  
 
 
