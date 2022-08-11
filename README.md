@@ -127,6 +127,9 @@ SELECT title FROM songs;
 ❗  'epic', and released after 1990, and less than 4 minutes long.
 
  SELECT title FROM songs WHERE mood = "epic" AND released > 1990 AND duration < 240;
+ 
+ ![image](https://user-images.githubusercontent.com/51888893/184189840-8326d6bc-a5ed-438f-989c-d0db65d8dbe7.png)
+
 
 -------------------------------------------
 ## 1 Use dataBase
