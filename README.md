@@ -185,6 +185,9 @@ SELECT * FROM exercise_logs WHERE type IN (SELECT type FROM drs_favorites);
 
 ![image](https://user-images.githubusercontent.com/51888893/184194871-5c7b56e5-f3d4-4a37-9225-1618a7ceb6e4.png)
 
+-------------------------------------------
+
+
 
 -------------------------------------------
 # # 🟢 SELECT
