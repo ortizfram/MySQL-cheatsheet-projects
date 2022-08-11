@@ -132,6 +132,7 @@ SELECT title FROM songs;
 
 -------------------------------------------
 # *️⃣ Querying IN Subqueries : 
+## 🟡 IN, NOT IN
 CREATE TABLE exercise_logs
     (id INTEGER PRIMARY KEY AUTOINCREMENT,
     type TEXT,
@@ -155,7 +156,34 @@ INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("hiking",
 
 ❗ WHERE `column_name` `IN` `("values", "values2")`
 
+💁exercises outside home , inside home
+
 SELECT * FROM exercise_logs WHERE type IN ("biking", "hiking", "tree climbing", "rowing")
+
+💁 new list of doctor's favourites exercises & why
+
+CREATE TABLE drs_favorites
+
+    (id INTEGER PRIMARY KEY,
+    
+    type TEXT,
+    
+    reason TEXT);
+
+INSERT INTO drs_favorites(type, reason) VALUES ("biking", "Improves endurance and flexibility.");
+
+INSERT INTO drs_favorites(type, reason) VALUES ("hiking", "Increases cardiovascular health.");
+
+SELECT type FROM drs_favorites;
+
+💁 to mantain the table update with doctors election of favourites
+
+❗ `subquery`
+
+SELECT * FROM exercise_logs WHERE type IN (SELECT type FROM drs_favorites);
+
+![image](https://user-images.githubusercontent.com/51888893/184194871-5c7b56e5-f3d4-4a37-9225-1618a7ceb6e4.png)
+
 
 -------------------------------------------
 # # 🟢 SELECT
