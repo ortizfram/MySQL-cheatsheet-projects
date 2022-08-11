@@ -54,7 +54,7 @@ SELECT * FROM groceries WHERE aisle > 5 aisle ORDER BY aisle
 ![image](https://user-images.githubusercontent.com/51888893/184146728-56d56602-ad5c-448a-b88f-c694ec6773f8.png)
 
 --------------------------------------------
-# *️⃣ Agregating D: SUM,MAX--GROUP BY
+# *️⃣ Agregating D: 
 ## 🟡SUM,MAX---GROUP BY
 
 ❗ `SUM/MAX(column)`, instead of Orderby we `GROUP BY` & we select the column we groupby cuse if not , we dont see it ordered
