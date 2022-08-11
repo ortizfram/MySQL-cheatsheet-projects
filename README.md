@@ -80,6 +80,8 @@ SELECT SUM(minutes) FROM todo_list
 ![image](https://user-images.githubusercontent.com/51888893/184161561-10a9aa50-9b78-4cb0-baf5-c704b93ef933.png)
 
 --------------------------------------------
+# *️⃣ Complex queries:
+## 🟡AND, OR
 ## 1 Use dataBase
 database
 ```
