@@ -7,7 +7,7 @@ https://bit.ly/3rvtqdO
 ###### 💁commented code is like this ⤵️
 ` --` SELECT * FROM customers
 -------------------------------------------
-# --CREATING a table and INSERTING data:
+# 🟢 CREATING a table and INSERTING data:
 
 CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER );
 
@@ -21,7 +21,8 @@ SELECT * FROM groceries;
 
 ![screenshot-www khanacademy org-2022 08 11-10_13_01](https://user-images.githubusercontent.com/51888893/184141430-57fdb433-7ab5-4167-b24b-02c636e0b7ac.png)
 --------------------------------------------
-# --Querying table:
+# *️⃣  Querying table:
+
 CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER);
 
 
@@ -38,9 +39,19 @@ INSERT INTO groceries VALUES(5, "Cherries", 6, 2);
 INSERT INTO groceries VALUES(6, "Chocolate syrup", 1, 4);
 
 
+SELECT * FROM groceries WHERE aisle > 5 ORDER BY aisle;
+
 SELECT name FROM groceries;
 
+❗ "giving just names"
+
 ![image](https://user-images.githubusercontent.com/51888893/184144221-c3413c79-7a7e-4738-86cc-80af0b1183c6.png)
+
+## 🟡 WHERE & ORDER BY
+
+SELECT * FROM groceries WHERE aisle > 5 aisle ORDER BY aisle
+
+![image](https://user-images.githubusercontent.com/51888893/184146728-56d56602-ad5c-448a-b88f-c694ec6773f8.png)
 
 
 --------------------------------------------
