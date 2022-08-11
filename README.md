@@ -160,6 +160,7 @@ INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("hiking",
 
 SELECT * FROM exercise_logs WHERE type IN ("biking", "hiking", "tree climbing", "rowing")
 
+## 🟡 SUBQUERIES
 💁 new list of doctor's favourites exercises & why
 
 CREATE TABLE drs_favorites
