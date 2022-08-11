@@ -20,8 +20,30 @@ INSERT INTO groceries VALUES (3, "Dark chocolate bars", 2);
 SELECT * FROM groceries;
 
 ![screenshot-www khanacademy org-2022 08 11-10_13_01](https://user-images.githubusercontent.com/51888893/184141430-57fdb433-7ab5-4167-b24b-02c636e0b7ac.png)
+--------------------------------------------
+# --Querying table:
+CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER);
 
 
+INSERT INTO groceries VALUES (1, "Bananas", 4, 7);
+
+INSERT INTO groceries VALUES(2, "Peanut Butter", 1, 2);
+
+INSERT INTO groceries VALUES(3, "Dark Chocolate Bars", 2, 2);
+
+INSERT INTO groceries VALUES(4, "Ice cream", 1, 12);
+
+INSERT INTO groceries VALUES(5, "Cherries", 6, 2);
+
+INSERT INTO groceries VALUES(6, "Chocolate syrup", 1, 4);
+
+
+SELECT name FROM groceries;
+
+![image](https://user-images.githubusercontent.com/51888893/184144221-c3413c79-7a7e-4738-86cc-80af0b1183c6.png)
+
+
+--------------------------------------------
 ## 1 Use dataBase
 database
 ```
