@@ -59,27 +59,23 @@ SELECT * FROM groceries WHERE aisle > 5 aisle ORDER BY aisle
 
 ❗ `SUM/MAX(column)`, instead of Orderby we `GROUP BY` & we select the column we groupby cuse if not , we dont see it ordered
 
-CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER);
+💁 sum the time it will take to finish all tasks
+
+CREATE TABLE todo_list (id INTEGER PRIMARY KEY, item TEXT, minutes INTEGER);
+
+INSERT INTO todo_list VALUES (1, "Wash the dishes", 15);
+
+INSERT INTO todo_list VALUES (2, "vacuuming", 20);
+
+INSERT INTO todo_list VALUES (3, "Learn some stuff on KA", 30);
+
+INSERT INTO todo_list VALUES (4, "finishing lesson", 50);
 
 
-
-INSERT INTO groceries VALUES (1, "Bananas", 56, 7);
-
-INSERT INTO groceries VALUES(2, "Peanut Butter", 1, 2);
-
-INSERT INTO groceries VALUES(3, "Dark Chocolate Bars", 2, 2);
-
-INSERT INTO groceries VALUES(4, "Ice cream", 1, 12);
-
-INSERT INTO groceries VALUES(5, "Cherries", 6, 2);
-
-INSERT INTO groceries VALUES(6, "Chocolate syrup", 1, 4);
+SELECT SUM(minutes) FROM todo_list
 
 
-
-SELECT aisle, SUM(quantity) FROM groceries GROUP BY aisle;
-
-![image](https://user-images.githubusercontent.com/51888893/184157761-5b91a51f-dd1c-4df8-95a7-4f667a725b0a.png)
+![image](https://user-images.githubusercontent.com/51888893/184161561-10a9aa50-9b78-4cb0-baf5-c704b93ef933.png)
 
 --------------------------------------------
 ## 1 Use dataBase
