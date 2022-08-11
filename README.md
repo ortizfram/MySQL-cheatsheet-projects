@@ -7,7 +7,7 @@ https://bit.ly/3rvtqdO
 ###### 💁commented code is like this ⤵️
 ` --` SELECT * FROM customers
 -------------------------------------------
-# 🟢 CREATING a table and INSERTING data:
+# *️⃣ CREATING a table and INSERTING data:
 
 CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER );
 
@@ -53,6 +53,32 @@ SELECT * FROM groceries WHERE aisle > 5 aisle ORDER BY aisle
 
 ![image](https://user-images.githubusercontent.com/51888893/184146728-56d56602-ad5c-448a-b88f-c694ec6773f8.png)
 
+--------------------------------------------
+# *️⃣ Agregating D: SUM,MAX--GROUP BY
+
+❗ `SUM/MAX(column)`, instead of Orderby we `GROUP BY` 
+
+CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER);
+
+
+
+INSERT INTO groceries VALUES (1, "Bananas", 56, 7);
+
+INSERT INTO groceries VALUES(2, "Peanut Butter", 1, 2);
+
+INSERT INTO groceries VALUES(3, "Dark Chocolate Bars", 2, 2);
+
+INSERT INTO groceries VALUES(4, "Ice cream", 1, 12);
+
+INSERT INTO groceries VALUES(5, "Cherries", 6, 2);
+
+INSERT INTO groceries VALUES(6, "Chocolate syrup", 1, 4);
+
+
+
+SELECT aisle, SUM(quantity) FROM groceries GROUP BY aisle;
+
+![image](https://user-images.githubusercontent.com/51888893/184157761-5b91a51f-dd1c-4df8-95a7-4f667a725b0a.png)
 
 --------------------------------------------
 ## 1 Use dataBase
