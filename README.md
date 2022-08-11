@@ -6,6 +6,21 @@ https://bit.ly/3rvtqdO
 
 ###### 💁commented code is like this ⤵️
 ` --` SELECT * FROM customers
+-------------------------------------------
+# --CREATING a table and INSERTING data:
+
+CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER );
+
+INSERT INTO groceries VALUES (1, "Bananas", 4);
+
+INSERT INTO groceries VALUES (2, "Peanut Butter", 1);
+
+INSERT INTO groceries VALUES (3, "Dark chocolate bars", 2);
+
+SELECT * FROM groceries;
+
+![screenshot-www khanacademy org-2022 08 11-10_13_01](https://user-images.githubusercontent.com/51888893/184141430-57fdb433-7ab5-4167-b24b-02c636e0b7ac.png)
+
 
 ## 1 Use dataBase
 database
