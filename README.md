@@ -57,7 +57,7 @@ SELECT * FROM groceries WHERE aisle > 5 aisle ORDER BY aisle
 
 --------------------------------------------
 # *️⃣ Agregating D: 
-## 🟡SUM,MAX---GROUP BY
+## 🟡SUM,MAX,AVG--GROUP BY
 
 ❗ `SUM/MAX(column)`, instead of Orderby we `GROUP BY` & we select the column we groupby cuse if not , we dont see it ordered
 
@@ -187,46 +187,40 @@ SELECT * FROM exercise_logs WHERE type IN (SELECT type FROM drs_favorites);
 
 -------------------------------------------
 # *️⃣ Restricting grouped results:
-CREATE TABLE exercise_logs
+	(CREATE TABLE exercise_logs
 
     (id INTEGER PRIMARY KEY AUTOINCREMENT,
-    
     type TEXT,
-    
     minutes INTEGER, 
-    
     calories INTEGER,
-    
     heart_rate INTEGER);
+    
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("biking", 30, 115, 110);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("biking", 10, 45, 105);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("dancing", 15, 200, 120);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("dancing", 15, 165, 120);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree climbing", 30, 70, 90);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree climbing", 25, 72, 80);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("rowing", 30, 70, 90);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("hiking", 60, 80, 85);
 
-INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("biking", 30, 115, 110);
+	SELECT * FROM exercise_logs;
 
-INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("biking", 10, 45, 105);
-
-INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("dancing", 15, 200, 120);
-
-INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("dancing", 15, 165, 120);
-
-INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree climbing", 30, 70, 90);
-
-INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree climbing", 25, 72, 80);
-
-INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("rowing", 30, 70, 90);
-
-INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("hiking", 60, 80, 85);
-
-SELECT * FROM exercise_logs;
 
 ## 🟡 AS ,HAVING
 
 ❗ when we use `HAVING`, we're apliying conditions to the `grouped values` not individual values in individual rows
 
-💁 summing calories `AS` total_calories & `having` total > 150 
+💁 AVG calories `AS` avg_calories & `having` avg total > 70
 
-SELECT type, SUM(calories) AS total_calories FROM exercise_logs
-    GROUP BY type
-    HAVING total_calories > 150;
-    
+	SELECT type, AVG(calories) AS avg_calories FROM exercise_logs
+	    GROUP BY type
+	    HAVING avg_calories > 70
+💁 choosing activities i've done more than 2 times :
+
+❗ `COUNT(*)` all columns where the exercise is repeated 
+
+	SELECT type FROM exercise_logs GROUP BY type HAVING COUNT(*) >= 2;
 -------------------------------------------
 # # 🟢 SELECT
 
