@@ -275,7 +275,37 @@ SELECT * FROM exercise_logs WHERE type IN (SELECT type FROM drs_favorites);
 	    FROM books GROUP BY author
 	    HAVING avg_words > 150000
 -------------------------------------------
+# *️⃣ Results with CASE:
+	CREATE TABLE exercise_logs
+	    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+	    type TEXT,
+	    minutes INTEGER, 
+	    calories INTEGER,
+	    heart_rate INTEGER);
 
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("biking", 30, 100, 110);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("biking", 10, 30, 105);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("dancing", 15, 200, 120);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("dancing", 15, 165, 120);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree climbing", 30, 70, 90);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree climbing", 25, 72, 80);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("rowing", 30, 70, 90);
+	INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("hiking", 60, 80, 85);
+
+	SELECT * FROM exercise_logs;
+## 🟡 CASE,WHEN->THEN,ELSE,END
+❗ `CASE` is used `like an IF`, `THEN` is `:`, `END as` `'column_name'`, `FROM` `table`;
+
+💁 which of the exercises takes `heart_rate` above max= (220-age), above target(90% of max), within target(50% of max), below t
+
+	SELECT type, heart_rate,
+	    CASE 
+		WHEN heart_rate > 220-30 THEN "above max"
+		WHEN heart_rate > ROUND(0.90 * (220-30)) THEN "above target"
+		WHEN heart_rate > ROUND(0.50 * (220-30)) THEN "within target"
+		ELSE "below target"
+	    END as "hr_zone"
+	FROM exercise_logs;
 -------------------------------------------
 # # 🟢 SELECT
 
