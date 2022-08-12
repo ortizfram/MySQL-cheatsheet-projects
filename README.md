@@ -6,7 +6,7 @@ Here the scripts that where used for examples 👇 (most of them from first fold
 
 https://bit.ly/3rvtqdO
 
-###### 💁commented code is like this ⤵️
+ 💁commented code is like this ⤵️
 ` --` SELECT * FROM customers
 -------------------------------------------
 # *️⃣ CREATING a table and INSERTING data:
