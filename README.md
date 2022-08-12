@@ -207,7 +207,7 @@ SELECT * FROM exercise_logs WHERE type IN (SELECT type FROM drs_favorites);
 	SELECT * FROM exercise_logs;
 
 
-## 🟡 AS ,HAVING
+## 🟡 AS ,HAVING, COUNT
 
 ❗ when we use `HAVING`, we're apliying conditions to the `grouped values` not individual values in individual rows
 
