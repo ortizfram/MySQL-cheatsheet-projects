@@ -1,13 +1,6 @@
 
-# MySQL_cheatsheet my sql commands
-Here the scripts that where used for examples 👇 (most of them from first folder)
-
+# SQL_cheatsheet_exercises
 ## 👉 Project: Design a store database https://gist.github.com/ortizfram/115771fba59c3a0e5afc40fa0fb59aa9
-
-https://bit.ly/3rvtqdO
-
- 💁commented code is like this ⤵️
-` --` SELECT * FROM customers
 -------------------------------------------
 # *️⃣ CREATING a table and INSERTING data:
 
