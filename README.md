@@ -186,9 +186,47 @@ SELECT * FROM exercise_logs WHERE type IN (SELECT type FROM drs_favorites);
 ![image](https://user-images.githubusercontent.com/51888893/184194871-5c7b56e5-f3d4-4a37-9225-1618a7ceb6e4.png)
 
 -------------------------------------------
+# *️⃣ Restricting grouped results:
+CREATE TABLE exercise_logs
 
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    
+    type TEXT,
+    
+    minutes INTEGER, 
+    
+    calories INTEGER,
+    
+    heart_rate INTEGER);
 
+INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("biking", 30, 115, 110);
 
+INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("biking", 10, 45, 105);
+
+INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("dancing", 15, 200, 120);
+
+INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("dancing", 15, 165, 120);
+
+INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree climbing", 30, 70, 90);
+
+INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree climbing", 25, 72, 80);
+
+INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("rowing", 30, 70, 90);
+
+INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("hiking", 60, 80, 85);
+
+SELECT * FROM exercise_logs;
+
+## 🟡 AS ,HAVING
+
+❗ when we use `HAVING`, we're apliying conditions to the `grouped values` not individual values in individual rows
+
+💁 summing calories `AS` total_calories & `having` total > 150 
+
+SELECT type, SUM(calories) AS total_calories FROM exercise_logs
+    GROUP BY type
+    HAVING total_calories > 150;
+    
 -------------------------------------------
 # # 🟢 SELECT
 
