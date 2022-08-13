@@ -1,6 +1,7 @@
 
 # SQL_cheatsheet_exercises
 ## 👉 Project: Design a store database https://gist.github.com/ortizfram/115771fba59c3a0e5afc40fa0fb59aa9
+## 👉 Project: Data dig Marvels Queries https://gist.github.com/ortizfram/0193243ed8376f61548720a9635dc57f
 -------------------------------------------
 # *️⃣ CREATING a table and INSERTING data:
 
