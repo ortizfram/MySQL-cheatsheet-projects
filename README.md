@@ -450,7 +450,7 @@ Student's Projects>>>>
 ![image](https://user-images.githubusercontent.com/51888893/184643675-1b26a9f6-38aa-492e-b7cf-5e403757010e.png)
 
 --------------------------------------------------------
-Challenge: Customer's orders
+Challenge: Customer's orders >>>>>
 
 	CREATE TABLE customers (
 	    id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -484,4 +484,7 @@ Challenge: Customer's orders
 	ON customers.id = orders.customer_id
 	GROUP BY customers.id
 	ORDER BY orders.price DESC;
+	
+![image](https://user-images.githubusercontent.com/51888893/184655628-65685de6-48aa-45f8-a0dd-4380180ecf99.png)
+
 
