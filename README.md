@@ -506,11 +506,11 @@ Challenge: Customer's orders >>>>>
 	    VALUES (4, "Simba", "Kingston", "simba@kingston.com", "555-1111", "2001-12-24", 3);
 ❗ you can do it by givving `alias` name to the `same table` & joining `ON` with `alias.id`
 
-	SELECT students.first_name, students.last_name, buddies.email
+	SELECT students.first_name, students.last_name, buddies.email AS buddy_email
 	    FROM students
 	    JOIN students buddies
 	    ON students.buddy_id = buddies.id;
 	    
-![image](https://user-images.githubusercontent.com/51888893/184658113-d54938cb-ba0e-45ba-a822-a204f5da34f1.png)
+![image](https://user-images.githubusercontent.com/51888893/184658562-c288ae67-e512-4109-9f8a-6991674e667c.png)
 
 
