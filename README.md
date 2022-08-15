@@ -406,6 +406,8 @@ Then you can use COUNT with GROUP BY to show the number of students with each of
 	    ON persons.id = hobbies.person_id;
 	    
 ## 🟡LEFT OUTER JOIN:
+Student's Projects>>>>
+
 	CREATE TABLE students (id INTEGER PRIMARY KEY,
 	    first_name TEXT,
 	    last_name TEXT,
