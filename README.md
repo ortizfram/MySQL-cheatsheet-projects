@@ -447,5 +447,39 @@ Then you can use COUNT with GROUP BY to show the number of students with each of
 	    
 ![image](https://user-images.githubusercontent.com/51888893/184643675-1b26a9f6-38aa-492e-b7cf-5e403757010e.png)
 
+--------------------------------------------------------
+Challenge: Customer's orders
 
+	CREATE TABLE customers (
+	    id INTEGER PRIMARY KEY AUTOINCREMENT,
+	    name TEXT,
+	    email TEXT);
+
+	INSERT INTO customers (name, email) VALUES ("Doctor Who", "doctorwho@timelords.com");
+	INSERT INTO customers (name, email) VALUES ("Harry Potter", "harry@potter.com");
+	INSERT INTO customers (name, email) VALUES ("Captain Awesome", "captain@awesome.com");
+
+	CREATE TABLE orders (
+	    id INTEGER PRIMARY KEY AUTOINCREMENT,
+	    customer_id INTEGER,
+	    item TEXT,
+	    price REAL);
+
+	INSERT INTO orders (customer_id, item, price)
+	    VALUES (1, "Sonic Screwdriver", 1000.00);
+	INSERT INTO orders (customer_id, item, price)
+	    VALUES (2, "High Quality Broomstick", 40.00);
+	INSERT INTO orders (customer_id, item, price)
+	    VALUES (1, "TARDIS", 1000000.00);
+
+💁  one row per each customer, with their name, email, and total amount of money they've spent on orders. Sort the rows according to the total money spent, from the most spent to the least spent.
+
+
+	SELECT customers.name, customers.email, 
+	SUM(orders.price) AS "total"
+	FROM customers
+	LEFT OUTER JOIN orders
+	ON customers.id = orders.customer_id
+	GROUP BY customers.id
+	ORDER BY orders.price DESC;
 
