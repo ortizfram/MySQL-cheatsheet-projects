@@ -488,6 +488,8 @@ Challenge: Customer's orders >>>>>
 ![image](https://user-images.githubusercontent.com/51888893/184655628-65685de6-48aa-45f8-a0dd-4380180ecf99.png)
 
 ## 🟡SELF-JOINS:
+buddies for projects >>>>
+
 	CREATE TABLE students (id INTEGER PRIMARY KEY AUTOINCREMENT,
 	    first_name TEXT,
 	    last_name TEXT,
