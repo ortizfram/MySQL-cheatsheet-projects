@@ -624,10 +624,14 @@ FriendBook>>>
 
 ![image](https://user-images.githubusercontent.com/51888893/184885965-8756f754-1ae7-456a-8387-896909527b3c.png)
 
-## 🟡 UPDATE,DELETE
-**UPDATE**
+## 🟡 UPDATE
 
 	UPDATE diary_logs SET content = "I had a horrible fight with OhNoesGuy" WHERE id = 1;
 	SELECT * FROM diary_logs;
 	
 ![image](https://user-images.githubusercontent.com/51888893/184886259-d35b99aa-8ee5-4fd7-bd19-57997a9223ce.png)
+## 🟡 DELETE
+	DELETE FROM diary_logs WHERE id = 1;
+	SELECT * FROM diary_logs;
+	
+![image](https://user-images.githubusercontent.com/51888893/184886875-bb947e8e-bb36-4c74-b56c-8a709078fa03.png)
