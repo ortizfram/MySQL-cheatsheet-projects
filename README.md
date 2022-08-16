@@ -682,3 +682,11 @@ FriendBook>>>
 
 	DELETE users WHERE id = 1 LIMIT 1;
 
+## 🟡transactions:
+❗to guarantee that no other transactions happen in the middle: start as`BEGIN TRANSACTION`
+end with`COMMIT`
+
+	BEGIN TRANSACTION;
+	INSERT INTO user_badges VALUES (1, "SQL Master");
+	UPDATE user SET recent_activity = "Earned SQL Master badge" WHERE id = 1;
+	COMMIT;
