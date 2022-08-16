@@ -662,3 +662,7 @@ FriendBook>>>
 	    "We went to Disneyland!", "happy");
 
 ![image](https://user-images.githubusercontent.com/51888893/184893824-fcec3019-d5ef-478a-b0d7-94933b77d6ee.png)
+
+**default text** : 
+
+	ALTER TABLE diary_logs ADD emotion TEXT default "unknown";
