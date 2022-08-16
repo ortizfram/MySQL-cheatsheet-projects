@@ -666,3 +666,19 @@ FriendBook>>>
 **default text** : 
 
 	ALTER TABLE diary_logs ADD emotion TEXT default "unknown";
+-------------------------------------------------
+# *️⃣make SQL safer:
+
+## 🟡Avoiding bad updates/deletes:
+❗Before you issue an UPDATE, **run a SELECT** with the same WHERE to make sure you're updating the right column and row.
+
+## 🟡 LIMIT 1
+❗to make sure you don't accidentally update too many rows:
+
+**UPDATE**
+
+	UPDATE users SET deleted = true WHERE id = 1 LIMIT 1;
+**DELETE**
+
+	DELETE users WHERE id = 1 LIMIT 1;
+
