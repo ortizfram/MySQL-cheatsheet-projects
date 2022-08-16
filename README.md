@@ -635,3 +635,30 @@ FriendBook>>>
 	SELECT * FROM diary_logs;
 	
 ![image](https://user-images.githubusercontent.com/51888893/184886875-bb947e8e-bb36-4c74-b56c-8a709078fa03.png)
+-------------------------------------------------------------
+>>>> alter table
+
+	CREATE TABLE users (
+	    id INTEGER PRIMARY KEY,
+	    name TEXT);
+
+	CREATE TABLE diary_logs (
+	    id INTEGER PRIMARY KEY,
+	    user_id INTEGER,
+	    date TEXT,
+	    content TEXT
+	    );
+
+	/* After user submits a diary log */
+	INSERT INTO diary_logs (user_id, date, content) VALUES (1, "2015-04-02",
+	    "OhNoesGuy and I made up and now we're best friends forever and we celebrated with a tub of ice cream.");
+	    
+## 🟡 ALTER TABLE
+❗ WHEN it's already created and need to update or add columns
+
+	ALTER TABLE diary_logs ADD emotion TEXT;
+
+	INSERT INTO diary_logs (user_id, date, content, emotion) VALUES (1, "2015-04-03",
+	    "We went to Disneyland!", "happy");
+
+![image](https://user-images.githubusercontent.com/51888893/184893824-fcec3019-d5ef-478a-b0d7-94933b77d6ee.png)
